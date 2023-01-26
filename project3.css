@@ -1,0 +1,299 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html{
+    font-size: 1.25em;
+}
+h1{
+    font-size: 3rem;
+}
+img{
+   
+}
+.header{
+    position: fixed;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    padding: 20px 20px;
+    background: #eee;
+}
+
+@media(max-width:650px){
+    .header{
+        
+        box-sizing: border-box;
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column; 
+    }
+}
+.menu-flex .main-manu{
+    display: flex;
+    justify-content: space-around;
+    color: #666;
+    margin:0 2rem;
+    padding:;
+    gap: .75rem;
+    
+    list-style: none;
+}
+.header p{
+    font-size: .90rem;
+}
+.menu-flex .main-manu a{
+    color: #666;
+}
+.main-manu li{
+    list-style: none;
+    position: relative;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.header  input{
+    width: 5rem;
+    height: 1rem;
+    margin-top: 17px;
+    margin-left: 10px;
+    margin-right: 0;
+    
+    
+    
+}
+.menu-flex2 .main-manu{
+    display: inline-flex;
+    color: #666;
+    
+}
+.menu-flex2 .main-manu a{
+    color: #666;
+}
+.main-manu ul:focus,
+.main-manu ul:hover{
+    opacity: 1;
+    visibility: visible;
+}
+
+.drop-item{
+    position: absolute;
+    top: 2rem;
+    left: -1rem;
+    box-shadow: 0 0 10px sclr-gray300;
+    background-color: rgb(237, 231, 226);
+    border-radius: 5%;
+    width: 6rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    transition: 200ms ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+
+}
+.drop-item li:focus,
+.drop-item li:hover{
+    background: #ccc;
+    width: 100%;
+}
+
+
+.box-container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    background: #ccc;
+}
+.box-container .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 90rem;
+    padding: 1rem;
+    margin: 2rem;
+    box-shadow: 0,0.3rem,0.5rem;
+}
+
+.box-container .box .img-container{
+    text-align: center;
+    padding: 1rem 2rem;
+
+}
+.box-container .box .img-container .big-img{
+    box-shadow: 0,0.3rem,0.5rem #3337;
+    border: .5rem solid #fff;
+    padding: 2rem 1rem;
+    background: #eee;
+}
+.box-container .box .img-container .big-img img{
+    height: 30rem;
+}
+.box-container .box .img-container .small-img{
+    padding: 1rem 0;
+}
+.box-container .box .img-container .small-img img{
+    max-width:200px ;
+    box-shadow: 0,0.3rem,0.5rem #3337;
+    border: .5rem solid #fff;
+    padding: 1rem;
+    background: #eee;
+    margin: 1rem 0;
+    height: 8rem;
+    cursor: pointer;
+}
+.box-container .box .img-container .small-img img.active,
+.box-container .box .img-container .small-img img:hover{
+    background: rgb(90, 236, 122);
+}
+.box-container .box .content{
+    padding: 1rem;
+}
+.box-container .box .content .title{
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+.box-container .box .content .price{
+    color: #333;
+    border-top: .2rem solid #333;
+    border-bottom: .2rem solid #333;
+    font-size: 1.5rem;
+    padding: .5rem;
+    display: inline-block;
+}
+.box-container .box .content p{
+    padding: .3rem 0;
+    font-size: 17px;
+    color: #666;
+    text-align: justify;
+}
+
+.box-container .box .content form .drop-down span{
+    font-size: 2rem;
+    display: block;
+    color: #333;
+    padding: 1rem;
+}
+.box-container .box .content form .drop-down select{
+    width: 100%;
+    height: 1.2rem;
+    font-size: ;
+    color: #666;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+.box-container .box .content form .drop-down {
+    margin-top:20px;
+}
+.box-container .box .content form .quantity{
+    padding: 0;
+    margin: ;
+
+}
+.box-container .box .content form .quantity input{
+    width: 12rem;
+    height: 1.2rem;
+    text-align: center;
+    color: #666;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.box-container .box .content .btn{
+    margin-top: 10px;
+    width: 100%;
+    height: 2rem;
+    background: #eee;
+    border: none;
+    border-radius: 5px;
+}
+
+.box-container .box .content .btn:hover{
+    background: rgb(90, 236, 122);
+}
+.box-container .box .content .btn2{
+    width: 100%;
+    height: 2rem;
+    background: #e3442b;
+    border: none;
+    font-size: 18px;
+    color:whitesmoke;  
+}
+.box-container .box .content .btn2:hover{
+    background: rgb(90, 236, 122);
+}
+.box-container .box .content .pay-info{
+    box-sizing: border-box;
+    margin: 30px 0;
+    
+    
+
+}
+.pay-info-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border: .5px solid #ccc;
+    
+}
+.pay-info .pay-info-grid h3{
+   background: lightskyblue;
+   margin: 0 20px;
+   padding: 5px;
+   text-align: center;
+}
+.pay-info .pay-info-grid a{
+    border-bottom: 1.5px solid #666;
+}
+
+.catagories p{
+    padding: 0px;
+    margin: 5px;
+    
+}
+.share a{
+    color: #333;
+}
+.share a:hover{
+    color: rgb(5, 234, 28);
+    transition: .2s ease-in-out;
+}
+.attribution { font-size: 11px; text-align: center;
+    margin-top: 10px; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media(max-width:650px){
+    .box-container{
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column; 
+    }
+    .box-container .box{
+        flex-direction: column;
+        width: auto;
+    }
+}
